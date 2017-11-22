@@ -1,0 +1,6 @@
+- name: Install packages
+  become: true
+  apt: name={{ item }} state=present update_cache=true upgrade=full
+  with_items:
+    - openssh-server
+    - git    
