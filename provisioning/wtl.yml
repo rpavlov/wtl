@@ -1,7 +1,12 @@
 ---
 - hosts: wtl
   become: yes
-  gather_facts: True
+  gather_facts: no
+  pre_tasks:
+    - name: 'install python2'
+      raw: sudo apt-get -y install python-simplejson
   roles:
     - packages
-    - main
+    - ssh
+    - nginx
+    - weechat

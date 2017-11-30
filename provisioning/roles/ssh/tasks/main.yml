@@ -7,6 +7,8 @@
 
 - name: Authorize ssh key
   copy: src=files/authorized_keys dest=~/.ssh/authorized_keys
+
+
 #
 # - name: Copy interfaces
 #   copy: src=files/interfaces dest=/etc/network/interfaces

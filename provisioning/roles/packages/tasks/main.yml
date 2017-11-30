@@ -1,6 +1,17 @@
+- name: Add repositories
+  with_items:
+    - ppa:brightbox/ruby-ng
+    - ppa:certbot/certbot
+    - ppa:nesthib/weechat-stable
+  apt_repository: repo={{ item }}
+
 - name: Install packages
   become: true
-  apt: name={{ item }} state=present update_cache=true upgrade=full
+  apt: name={{ item }} state=present update_cache=true
   with_items:
     - openssh-server
-    - git    
+    - git
+    - nginx
+    - software-properties-common
+    - python-certbot-nginx
+    - weechat
