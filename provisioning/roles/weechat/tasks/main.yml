@@ -1,0 +1,2 @@
+- name: Copy relay configuration
+  copy: src=files/relay.conf dest=.weechat/relay.conf
