@@ -1,6 +1,6 @@
 # Use
 
-    ansible-playbook -i provisioning/wtl_inventory provisioning/wtl.yml --ask-pass
+    ansible-playbook -i provisioning/wtl_inventory provisioning/wtl.yml --ask-become-pass
 
 Run without --ask-pass subsequent times
 

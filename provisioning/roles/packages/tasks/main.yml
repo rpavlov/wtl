@@ -1,8 +1,16 @@
+- name: Add weechat repo key
+  apt_key:
+    keyserver: keys.gnupg.net
+    id: 11E9DE8848F2B65222AA75B8D1820DB22A11534E
+
+- apt_repository:
+    repo: deb https://weechat.org/ubuntu artful main
+    state: present
+
 - name: Add repositories
   with_items:
     - ppa:brightbox/ruby-ng
     - ppa:certbot/certbot
-    - ppa:nesthib/weechat-stable
   apt_repository: repo={{ item }}
 
 - name: Install packages
