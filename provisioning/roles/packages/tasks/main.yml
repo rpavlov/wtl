@@ -1,10 +1,10 @@
 - name: Add weechat repo key
   apt_key:
-    keyserver: keys.gnupg.net
+    keyserver: ha.pool.sks-keyservers.net
     id: 11E9DE8848F2B65222AA75B8D1820DB22A11534E
 
 - apt_repository:
-    repo: deb https://weechat.org/ubuntu artful main
+    repo: deb https://weechat.org/ubuntu xenial main
     state: present
 
 - name: Add repositories
@@ -22,5 +22,7 @@
     - nginx
     - software-properties-common
     - python-certbot-nginx
+    - weechat-plugins
+    - weechat-curses
     - weechat
     - mosh

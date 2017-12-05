@@ -1,2 +1,5 @@
+# - name: Create dir for ssh key
+#   file: path=~/.weechat/ state=directory
+
 - name: Copy relay configuration
-  copy: src=files/relay.conf dest=.weechat/relay.conf
+  copy: src=files/relay.conf dest=~/.weechat/relay.conf
