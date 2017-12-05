@@ -1,6 +1,10 @@
 server {
-    listen 8080;
-    listen 443 ssl;
+
+    listen 443;
+
+    ssl    on;
+    ssl_certificate    /etc/letsencrypt/live/whythis.life/fullchain.pem;
+    ssl_certificate_key    /etc/letsencrypt/live/whythis.life/privkey.pem;
 
     server_name whythis.life;
     root /www;
