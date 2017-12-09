@@ -1,6 +1,6 @@
 # Use
 
-    ansible-playbook -i provisioning/wtl_inventory provisioning/wtl.yml --ask-become-pass
+    ansible-playbook -i wtl roles/wtl.yml --vault-password-file vault_password.txt
 
 # Info
 
