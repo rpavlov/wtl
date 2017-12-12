@@ -1,0 +1,12 @@
+- command: "ufw allow {{ item }} "
+  become: true
+  with_items:
+  - 22
+  - 443
+  - 80
+
+- command: "ufw enable"
+  become: true
+
+- command: "ufw allow 60000:61000/udp"
+  become: true

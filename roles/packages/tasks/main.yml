@@ -18,6 +18,9 @@
   become: true
   apt: name={{ item }} state=present update_cache=true
   with_items:
+    - unattended-upgrades
+    - fail2ban
+    - ufw
     - openssh-server
     - git
     - nginx
