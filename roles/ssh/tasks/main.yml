@@ -10,3 +10,6 @@
 
 - name: Copy interfaces
   copy: src=files/interfaces dest=/etc/network/interfaces
+
+- name: Copy sshd_config
+  copy: src=files/sshd_config dest=/etc/ssh/sshd_config
