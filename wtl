@@ -1,2 +1,2 @@
 [wtl]
-whythis.life ansible_ssh_port=222 ansible_ssh_user=rpavlov ansible_become_pass="{{ become_pass }}"
+toolroom ansible_ssh_port=222 ansible_ssh_user=rpavlov ansible_become_pass="{{ become_pass }}"
